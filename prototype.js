@@ -1,3 +1,4 @@
+var Repo = require('./module-pattern');
 var Task = function(data) {
     this.name = data.name;
     this.completed = false;
@@ -5,12 +6,12 @@ var Task = function(data) {
 
 
 Task.prototype.complete = function() {
-    console.log('Complete task for ' + this.name);
+    console.log('Complete task for ' + this.name + ' ');
     this.completed = true;
 };
 
 Task.prototype.save = function() {
-    console.log('Saving this ', +' ' + this.name);
+    console.log('Saving this', +' ' + this.name);
     Repo.save(this);
 };
 
