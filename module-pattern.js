@@ -1,15 +1,20 @@
 var repo = function() {
 
-    return {
-        get: function(id) {
-            console.log('Getting task ' + id);
-            return {
-                name: 'New task from DB '
-            }
-        },
-        save: function(task) {
-            console.log('saving ' + task.name + ' ' + 'to DB');
+    var get = function(id) {
+        console.log('Getting task ' + id);
+        return {
+            name: 'New task from DB '
         }
+    }
+
+    var save = function(task) {
+        console.log('saving ' + task.name + ' ' + 'to DB');
+    }
+
+
+    return {
+        get: get,
+        save: save
 
     }
 }
